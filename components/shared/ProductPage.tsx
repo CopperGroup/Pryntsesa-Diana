@@ -130,23 +130,38 @@ export default function ProductPage({ productJson, selectParams }: { productJson
                     <Separator className="my-12" />
                     
                     <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
-                        <div itemProp="description">
+                        <div itemProp="description" className='max-w-[80vw]'>
                             <h2 className="text-heading4-medium mb-4">Опис</h2>
                             <p className="text-base-regular text-gray-700">{product.description}</p>
                         </div>
                         
-                        <div>
+                        <div className="w-full">
                             <h2 className="text-heading4-medium mb-4">Параметри</h2>
-                            <table className="w-full">
+                            <div className="max-sm:hidden overflow-x-auto">
+                                <table className="w-full">
                                 <tbody>
-                                    {product.params.map((param: { name: string, value: string }) => (
-                                        <tr key={param.name} className="border-b">
-                                            <td className="py-2 text-base-semibold">{param.name}</td>
-                                            <td className="py-2 text-base-regular text-gray-700">{param.value.replaceAll("_", " ")}</td>
-                                        </tr>
+                                    {product.params.map((param: { name: string; value: string }) => (
+                                    <tr key={param.name} className="border-b">
+                                        <td className="py-2 pr-4 text-base-semibold w-1/3 md:w-2/5">
+                                        <div className="break-words">{param.name}</div>
+                                        </td>
+                                        <td className="py-2 text-base-regular text-gray-700 w-2/3 md:w-3/5">
+                                        <div className="break-words">{param.value.replaceAll("_", " ")}</div>
+                                        </td>
+                                    </tr>
                                     ))}
                                 </tbody>
-                            </table>
+                                </table>
+                            </div>
+
+                            <div className="sm:hidden space-y-4 mt-4">
+                                {product.params.map((param: { name: string; value: string }) => (
+                                <div key={param.name} className="border-b pb-3 max-w-[80vw]">
+                                    <div className="text-base-semibold mb-1">{param.name}</div>
+                                    <div className="text-base-regular text-gray-700 break-words">{param.value}</div>
+                                </div>
+                                ))}
+                            </div>
                         </div>
                     </div>
                 </article>

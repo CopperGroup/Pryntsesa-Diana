@@ -72,7 +72,7 @@ export default function History() {
             transition={{ duration: 0.6, delay: 0.5 }}
           >
             <Image
-              src="/assets/about-us.jpeg"
+              src="/assets/history-image.jpg"
               alt={`${Store.name} через роки інновацій`}
               width={800}
               height={600}

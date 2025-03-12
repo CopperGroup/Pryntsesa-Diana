@@ -6,7 +6,7 @@ export const Store = {
   "database": "_2025_03_12",
   "default_image": {
     "product_card": 0,
-    "product_page": 1,
+    "product_page": 0,
     "checkout_page": 0
   }
 };

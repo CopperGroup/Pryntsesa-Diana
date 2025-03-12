@@ -552,7 +552,7 @@ export function formatStringWithDate(input: string) {
 }
 
 export function normalizeRepoName(name: string): string {
-  const cyrillicToLatinMap = {
+  const cyrillicToLatinMap: { [key: string]: string } = {
       'А': 'A', 'Б': 'B', 'В': 'V', 'Г': 'H', 'Д': 'D', 'Е': 'E', 'Є': 'Ye', 'Ж': 'Zh',
       'З': 'Z', 'И': 'Y', 'І': 'I', 'Ї': 'Yi', 'Й': 'Y', 'К': 'K', 'Л': 'L', 'М': 'M',
       'Н': 'N', 'О': 'O', 'П': 'P', 'Р': 'R', 'С': 'S', 'Т': 'T', 'У': 'U', 'Ф': 'F',
