@@ -110,7 +110,7 @@ export default function ContactButton() {
 
         <Button
           onClick={() => setIsContactOpen(true)}
-          className="size-14 bg-white rounded-full shadow-lg flex items-center justify-center border border-gray-200 transition-all duration-300 ease-in-out hover:bg-sky-50 max-sm:size-12"
+          className="size-16 bg-white rounded-full shadow-lg flex items-center justify-center border border-gray-200 transition-all duration-300 ease-in-out hover:bg-sky-50 max-sm:size-14"
         >
           <MessageCircle className="w-6 h-6 text-sky-500 max-sm:w-5 max-sm:h-5" />
         </Button>
